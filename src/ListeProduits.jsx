@@ -1,21 +1,30 @@
 import './ListeProduits.css';
+import Produit from './Produit';
+import lesProduits from './data/produits.json';
 export default function ListeProduits() {
-    let a = 5;
-    let b = a^4;
+  // Impérative
+  let composantProduits = [];
+
+  // Méthode 1
+  // for (let i=0; i < lesProduits.length; i++) {
+  //   composantProduits.push(<Produit nom={lesProduits[i].nom} prix={lesProduits[i].prix} pid={lesProduits[i].id}/>)
+  // }
+
+  // Méthode 2
+  let notes = [59.566,78.23,85.258,35.9954];
+  let notesArondies = notes.map(UneNote => UneNote.toFixed(1)-0);
+  // console.log(notesArondies);
     return (
         <section className="ListeProduits">
         <h2>Nos produits</h2>
-        <div>
-          <article>
-              <img src="" alt="" />
-              <div className="titre">Titre du Produit</div>
-              <div className="prix">13.95</div>
-              <button>Ajouter au panier</button>
-          </article>
-          <article>Produit 2</article>
-          <article>Produit 3</article>
-          <article>Produit 4</article>
-          <article>Produit 5</article>
+        <div className='ListesProduits'>
+          {/* Méthode 1 */}
+          {/* {composantProduits} */}
+
+          {/* Méthode 2 */}
+          { lesProduits.map(produit => <Produit nom={produit.nom} prix={produit.prix} pid={produit.id}/>) }
+          
+          {/* <Produit nom={lesProduits[0].nom} prix={lesProduits[0].prix} pid={lesProduits[0].id}/> */}
         </div>
       </section>
     );

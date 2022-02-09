@@ -1,0 +1,31 @@
+[{
+        "id": "prd0001",
+        "nom": "Chandail d'uniforme 100 % coton biologique pour Enfant",
+        "prix": 35
+    },
+    {
+        "id": "prd0002",
+        "nom": "Pyjama en polyester recyclé à 100 % teint par nœuds pour Enfant",
+        "prix": 36
+    },
+    {
+        "id": "prd0003",
+        "nom": "Legging croisé GapFit pour Adolescente",
+        "prix": 43
+    },
+    {
+        "id": "prd0004",
+        "nom": "Bas noirs",
+        "prix": 9
+    },
+    {
+        "id": "prd0005",
+        "nom": "Chandail blanc",
+        "prix": 37
+    },
+    {
+        "id": "prd0006",
+        "nom": "Jeans",
+        "prix": 45
+    }
+]

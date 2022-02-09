@@ -1,4 +1,5 @@
 {
+    "remarque": "Enlever le TEMP de la prochaine propriété pour puplier",
     "homepage": "https://cdhyppolite.github.io/panier-achats",
     "name": "panier-achats",
     "version": "0.1.0",
