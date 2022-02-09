@@ -1,4 +1,4 @@
-import './ListeProduits.css';
+import './ListeProduits.scss';
 import Produit from './Produit';
 import lesProduits from './data/produits.json';
 export default function ListeProduits() {
@@ -22,8 +22,8 @@ export default function ListeProduits() {
           {/* {composantProduits} */}
 
           {/* Méthode 2 */}
-          { lesProduits.map(produit => <Produit nom={produit.nom} prix={produit.prix} pid={produit.id}/>) }
-          
+          { lesProduits.map(produit => <Produit key={produit.id} nom={produit.nom} prix={produit.prix} pid={produit.id}/>) }
+
           {/* <Produit nom={lesProduits[0].nom} prix={lesProduits[0].prix} pid={lesProduits[0].id}/> */}
         </div>
       </section>
