@@ -1,12 +1,17 @@
 .Produit {
-    border: 1px solid red;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: ivory;
+    box-shadow: 5px 5px 15px 2px rgba(80, 78, 77, 0.75);
     .titre {
         font-size: 1.25rem;
         font-weight: bold;
-        text-align: center;
-        background-color: whitesmoke;
     }
     .prix::after {
         content: ' $CA';
+    }
+    img {
+        height: 240px;
     }
 }

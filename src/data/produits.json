@@ -30,5 +30,15 @@
         "id": "prd0006",
         "nom": "Jeans",
         "prix": 45
+    },
+    {
+        "id": "prd0007",
+        "nom": "Chandail Carey Price",
+        "prix": 200
+    },
+    {
+        "id": "prd0008",
+        "nom": "Casquette Finale Coupe Stanley",
+        "prix": 25
     }
 ]
