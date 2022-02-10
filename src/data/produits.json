@@ -1,16 +1,19 @@
 [{
         "id": "prd0001",
-        "nom": "Chandail d'uniforme 100 % coton biologique pour Enfant",
+        "nom": "Chandail pour Enfant",
+        "Tnom": "Chandail d'uniforme 100 % coton biologique pour Enfant",
         "prix": 35
     },
     {
         "id": "prd0002",
-        "nom": "Pyjama en polyester recyclé à 100 % teint par nœuds pour Enfant",
+        "nom": "Pyjama en polyester",
+        "Tnom": "Pyjama en polyester recyclé à 100 % teint par nœuds pour Enfant",
         "prix": 36
     },
     {
         "id": "prd0003",
-        "nom": "Legging croisé GapFit pour Adolescente",
+        "nom": "Legging pour Adolescente",
+        "Tnom": "Legging croisé GapFit pour Adolescente",
         "prix": 43
     },
     {

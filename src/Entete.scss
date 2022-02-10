@@ -1,8 +1,18 @@
 .Entete {
+    position: sticky;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: #444;
+    color: white;
     h1 {
         font-size: 1.4rem;
+        padding: 10px;
+    }
+    nav {
+        padding: 1rem 2rem;
+        a {
+            padding-left: 0.75rem;
+        }
     }
 }

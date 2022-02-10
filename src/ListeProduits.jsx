@@ -17,7 +17,7 @@ export default function ListeProduits() {
     return (
         <section className="ListeProduits">
         <h2>Nos produits</h2>
-        <div className='ListesProduits'>
+        <div className='Produits'>
           {/* Méthode 1 */}
           {/* {composantProduits} */}
 

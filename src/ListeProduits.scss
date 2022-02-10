@@ -1,0 +1,11 @@
+.ListeProduits {
+    padding: 2rem;
+    h2 {
+        font-size: 2rem;
+    }
+    .Produits {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}

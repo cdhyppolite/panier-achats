@@ -1,0 +1,12 @@
+.Produit {
+    border: 1px solid red;
+    .titre {
+        font-size: 1.25rem;
+        font-weight: bold;
+        text-align: center;
+        background-color: whitesmoke;
+    }
+    .prix::after {
+        content: ' $CA';
+    }
+}
