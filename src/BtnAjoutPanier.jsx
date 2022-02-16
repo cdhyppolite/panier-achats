@@ -1,11 +1,11 @@
 import './BtnAjoutPanier.scss';
 import Badge from '@mui/material/Badge';
-// import AddShoppingCartSharpIcon from '@mui/icons-material/AddShoppingCartSharp';
-export default function BtnAjoutPanier() {
+
+export default function BtnAjoutPanier(props) {
+
     return (
-        <Badge badgeContent={4} color="primary">
-            <button className='BtnAjouterPanier'>Ajouter au panier</button>
-        </Badge>
-        // <AddShoppingCartSharpIcon/>
+        <Badge badgeContent={props.qte} color="primary">
+            <button onClick={props.onClick} className="BtnAjoutPanier">Ajouter au panier</button>
+        </Badge>   
     );
 }

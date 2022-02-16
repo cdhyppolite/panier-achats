@@ -2,17 +2,16 @@ import './Entete.scss';
 import ShoppingCartSharpIcon from '@mui/icons-material/ShoppingCartSharp';
 import Badge from '@mui/material/Badge';
 
-export default function Entete() {
+export default function Entete(props) {
+    console.log("Les props du composant Entête : ", props);
+    console.log("Le panier dans Entête : ", props.panier);
     return (
         <header className="Entete">
             <h1>Magasin général</h1>
             <nav>
-                {/* <a href="#">Panier d'achats</a> */}
-                <a href="#">
-                    <Badge badgeContent={1} color="secondary">
-                        <ShoppingCartSharpIcon/>
-                    </Badge>
-                </a>
+                <Badge badgeContent={Object.values(props.panier).length} color="secondary">
+                    <ShoppingCartSharpIcon/>
+                </Badge>
                 <a href="#">Contactez-nous</a>
             </nav>
         </header>
