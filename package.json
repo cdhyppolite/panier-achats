@@ -1,6 +1,6 @@
 {
     "remarque": "Enlever le X de la prochaine propriété pour puplier",
-    "homepage": "https://cdhyppolite.github.io/panier-achats",
+    "xhomepage": "https://cdhyppolite.github.io/panier-achats",
     "name": "panier-achats",
     "version": "0.1.0",
     "private": true,
