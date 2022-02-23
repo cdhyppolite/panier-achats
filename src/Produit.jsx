@@ -1,21 +1,23 @@
 import './Produit.scss';
 import BtnAjoutPanier from './BtnAjoutPanier';
 
-export default function Produit(props) {
-    const [panier, setPanier] = props.etatPanier;
+export default function Produit({etatPanier:[panier, setPanier], nom, prix, pid}) {
+
+    /********************************* */
+    // const [panier, setPanier] = etatPanier;
 
     let qte = 0;
-    if(panier[props.pid]) {
-        qte = panier[props.pid].qte;
+    if(panier[pid]) {
+        qte = panier[pid].qte;
     }
 
     function ajouterAuPanier() {
-        if(panier[props.pid]) {
-            panier[props.pid].qte++;
+        if(panier[pid]) {
+            panier[pid].qte++;
         }
         else {
-            panier[props.pid] = {
-                prix: props.prix,
+            panier[pid] = {
+                prix: prix,
                 qte: 1
             };
         }
@@ -31,9 +33,9 @@ export default function Produit(props) {
 
     return (
         <article className="Produit">
-            <img src={"images-produits/" + props.pid + ".webp"} alt={props.nom} />
-            <div className="titre">{props.nom}</div> 
-            <div className="prix">{props.prix}</div>
+            <img src={"images-produits/" + pid + ".webp"} alt={nom} />
+            <div className="titre">{nom}</div> 
+            <div className="prix">{prix}</div>
             <BtnAjoutPanier qte={qte} onClick={ajouterAuPanier} />
         </article>
     );
