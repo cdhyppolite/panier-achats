@@ -3,10 +3,12 @@ import Entete from './Entete';
 import PiedPage from './PiedPage';
 import ListeProduits from './ListeProduits';
 import {useState} from 'react';
+import { useEffect } from 'react';
 
 function App() {
   // État React pour gérer un panier d'achats
-  const etatPanier = useState({});
+  const etatPanier = useState(() => JSON.parse(window.localStorage.getItem('panier-4pa')) || {});
+
   // Remarquez que useState retourne un tableau : 
   // Le premier élément du tableau représente le contenu de l'état
   const panier = etatPanier[0]; 
@@ -19,7 +21,11 @@ function App() {
   // Remarquez la syntaxe JS de "déstructuration" de tableau : on obtient 
   // rapidement deux variables contenant les deux éléments du tableau retourné 
   // par useState()
-  const [compteur, setCompteur] = useState(0); 
+  const [compteur, setCompteur] = useState(0);
+  //HOOK
+  useEffect( () => window.localStorage.setItem('panier-4pa', JSON.stringify(panier)), [panier] );
+  
+  
 
   return (
     <div className="App">
