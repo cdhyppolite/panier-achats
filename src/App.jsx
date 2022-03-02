@@ -4,6 +4,9 @@ import PiedPage from './PiedPage';
 import ListeProduits from './ListeProduits';
 import {useState} from 'react';
 import { useEffect } from 'react';
+import {Routes, Route} from 'react-router-dom';
+import Accueil from './Accueil';
+import Histoire from './Histoire';
 
 function App() {
   // État React pour gérer un panier d'achats
@@ -29,11 +32,15 @@ function App() {
 
   return (
     <div className="App">
-      <Entete panier={panier} test="Allo Props"/>
-      <ListeProduits etatPanier={etatPanier} />
+      <Entete panier={panier} test="Allo Props" />
+      <Routes>
+        <Route path='/' element={<Accueil/>}/>
+        <Route path='/notre-histoire' element={<Histoire/>}/>
+        <Route path='/nos-produits' element={<ListeProduits etatPanier={etatPanier} />}/>
+      </Routes>
       <div>
         <span>Nombre de clics : {compteur} </span>
-        <button onClick={() => {setCompteur(compteur+1); console.log('Compteur des clics : ', compteur);}}>Cliquez-moi</button>
+        <button onClick={()=> {setCompteur(compteur+1); console.log('Compteur des clics : ', compteur);}}>Cliquez-moi</button>
       </div>
       <PiedPage />
     </div>

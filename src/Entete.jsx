@@ -2,6 +2,7 @@ import './Entete.scss';
 import ShoppingCartSharpIcon from '@mui/icons-material/ShoppingCartSharp';
 import Badge from '@mui/material/Badge';
 import { accordionActionsClasses, alertTitleClasses } from '@mui/material';
+import {NavLink} from 'react-router-dom';
 
 export default function Entete({panier}) {
     // Obtenir les 5 info impportantes pour le sommaire panier (on passe le tableau 
@@ -9,8 +10,12 @@ export default function Entete({panier}) {
     const {articlesDifferents, articlesTotaux, sousTotal, taxes, total} = calculerInfoPanier(Object.values(panier));
 return (
 <header className="Entete">
-    <h1>Magasin général</h1>
-    <nav>
+    <h1><NavLink to='/' className={({isActive}) => isActive ? 'lien-actif' : ''}>Magasin général</NavLink></h1>
+    <nav className="nav-principal">
+        <NavLink to='/nos-produits' className={({isActive}) => isActive ? 'lien-actif' : ''}>Produits</NavLink>
+        <NavLink to='/notre-histoire' className={({isActive}) => isActive ? 'lien-actif' : ''}>Notre Histoire</NavLink>
+    </nav>
+    <nav className='nav-secondaire'>
         <input type="checkbox" id="cc-sommaire-panier" />
         <div className="sommaire-panier">
             <h3>Sommaire du Panier</h3>
@@ -21,7 +26,6 @@ return (
             <div> <span>Total</span>{total}</div>
         </div>
         {/* ------------------- */}
-        {/* <Badge badgeContent={Object.values(panier.panier).reduce((acc,article)=> acc+article.qte, 0)} color="secondary"> */}
         <Badge badgeContent={articlesTotaux} color="secondary">
             <label htmlFor="cc-sommaire-panier">
                 <ShoppingCartSharpIcon /></label>

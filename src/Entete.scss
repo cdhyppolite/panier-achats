@@ -11,7 +11,20 @@
         font-size: 1.4rem;
         padding: 1rem 2rem;
     }
-    nav {
+    .lien-actif {
+        color: deeppink;
+        font-weight: bold;
+    }
+    nav.nav-principal {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        // justify-self: flex-start;
+        margin-right: auto;
+        column-gap: 1rem;
+        border: 2px dotted red;
+    }
+    nav.nav-secondaire {
         padding: 1rem 2rem;
         display: flex;
         align-items: center;
