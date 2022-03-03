@@ -2,7 +2,6 @@ import './ListeProduits.scss';
 import Produit from './Produit';
 import lesProduits from './data/produits.json';
 
-// export default function ListeProduits(props) {
 export default function ListeProduits({etatPanier}) {
     return (
         <section className="ListeProduits">

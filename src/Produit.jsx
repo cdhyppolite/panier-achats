@@ -1,11 +1,7 @@
 import './Produit.scss';
 import BtnAjoutPanier from './BtnAjoutPanier';
 
-export default function Produit({etatPanier:[panier, setPanier], nom, prix, pid}) {
-
-    /********************************* */
-    // const [panier, setPanier] = etatPanier;
-
+export default function Produit({etatPanier: [panier, setPanier], nom, prix, pid}) {
     let qte = 0;
     if(panier[pid]) {
         qte = panier[pid].qte;
@@ -28,6 +24,8 @@ export default function Produit({etatPanier:[panier, setPanier], nom, prix, pid}
         // let clonePanier = JSON.parse(JSON.stringify(panier));
         // let clonePanier = Object.assign({}, panier);
         // let clonePanier = {... panier}
+        // Spread operator : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+        
         setPanier({...panier});
     }
 
