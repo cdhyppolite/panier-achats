@@ -11,7 +11,7 @@ export default function ListeProduits({etatPanier}) {
     // Obtenir les produits de la collection Firestore
     useEffect(function() {
         // Obtenir tous les documents de la collection 'magasin-produits'
-        getDocs(query(collection(bd, projetFirebase), where('prix', '<=', 40))).then(
+        getDocs(query(collection(bd, projetFirebase), where('prix', '>=', 40))).then(
             qs => setProduits(qs.docs.map(doc => ({id: doc.id, ...doc.data()})))
         );
     }, []);

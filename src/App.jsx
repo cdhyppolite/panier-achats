@@ -6,6 +6,8 @@ import {useEffect, useState} from 'react';
 import {Routes, Route} from 'react-router-dom';
 import Accueil from './Accueil';
 import Histoire from './Histoire';
+import { authFirebase, authGoogle } from './firebase/init';
+import {signInWithPopup,} from "firebase/auth";
 
 function App() {
   // État React pour gérer un panier d'achats
@@ -25,7 +27,9 @@ function App() {
    * Déclenche le processus d'authentification avec Google Auth Provider
    */
   function connexion() {
-    
+    signInWithPopup(authFirebase, authGoogle).then(
+      userGoogle => setUtil(userGoogle.user)
+    );
   }
 
   return (
