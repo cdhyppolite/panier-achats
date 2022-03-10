@@ -7,7 +7,7 @@ import {Routes, Route} from 'react-router-dom';
 import Accueil from './Accueil';
 import Histoire from './Histoire';
 import { authFirebase, authGoogle } from './firebase/init';
-import {signInWithPopup,} from "firebase/auth";
+import {signInWithPopup, onAuthStateChanged} from "firebase/auth";
 
 function App() {
   // État React pour gérer un panier d'achats
@@ -31,6 +31,9 @@ function App() {
       userGoogle => setUtil(userGoogle.user)
     );
   }
+
+  // Maintenir la connexion
+  useEffect(() => onAuthStateChanged(authFirebase, user => setUtil(user)),[] );  
 
   return (
     <div className="App">
