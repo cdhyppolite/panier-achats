@@ -6,4 +6,3 @@ export default function Accueil() {
         </section>
     );
 }
-// npm install react-router-dom@6
